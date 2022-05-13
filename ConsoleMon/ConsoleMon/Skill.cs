@@ -8,14 +8,14 @@ namespace ConsoleMon
 {
     internal class Skill
     {
-        float damage = 0;
-        float energyCost = 0;
+        int damage = 0;
+        int energyCost = 0;
         string name = "Lick";
 
         public void UseOn(ConsoleMon target, ConsoleMon caster)
         {
-            caster.DepleteEnergy(5);
-            target.TakeDamage(5);
+            caster.DepleteEnergy(energyCost);
+            target.TakeDamage(damage);
 
         }
     }
