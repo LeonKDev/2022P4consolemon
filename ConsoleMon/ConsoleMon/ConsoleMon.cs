@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleMon
 {
+    enum Elements
+    {
+        Fire,
+        Water,
+        Dark,
+        Light
+    }
+
     internal class ConsoleMon
     {
-      int Health = 5;
-      int Energy = 0;
-      string name = "licky";
+     int Health = 5;
+     int Energy = 0;
+     string name = "licky";
 
-     List<Skill> Skills = new List<Skill>();
+        Elements weaknes = Elements.Water;
 
-       
-     
+        List<Skill> Skills = new List<Skill>();
 
         public void TakeDamage(int Damage)
         {
@@ -25,9 +32,7 @@ namespace ConsoleMon
 
         public void DepleteEnergy(int energy)
         {
-            Energy =- energy;
-        }
-
-       
+            Energy = -energy;
+        }  
     }
 }

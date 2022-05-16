@@ -12,11 +12,13 @@ namespace ConsoleMon
         int energyCost = 0;
         string name = "Lick";
 
+        Elements element = Elements.Fire;
+
         public void UseOn(ConsoleMon target, ConsoleMon caster)
         {
             caster.DepleteEnergy(energyCost);
             target.TakeDamage(damage);
 
-        }
+        }   
     }
 }
