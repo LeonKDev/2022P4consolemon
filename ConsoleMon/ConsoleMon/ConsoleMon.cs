@@ -16,11 +16,15 @@ namespace ConsoleMon
 
     internal class ConsoleMon
     {
-     int Health = 5;
-     int Energy = 0;
-     string name = "licky";
+     internal int Health = 5;
+     internal int Energy = 0;
+     internal string name, MonsterType;
+     internal int damage;
+     
 
-        Elements weaknes = Elements.Water;
+     
+
+        Elements weakness = Elements.Water;
 
         List<Skill> Skills = new List<Skill>();
 
@@ -34,5 +38,37 @@ namespace ConsoleMon
         {
             Energy = -energy;
         }  
+
+        internal ConsoleMon()
+        {
+
+        }
+
+        internal ConsoleMon(ConsoleMon copyFrom)
+        {
+            this.name = copyFrom.name;
+            this.Health = copyFrom.Health;
+            this.Energy = copyFrom.Energy;
+
+            damage = copyFrom.damage;
+            //[attack, fireball, screech]
+
+            for (int i = 0; i < copyFrom.Skills.Count; i++)
+            {
+                Skill copyFromThisSkill = copyFrom.Skills[i];
+                Skill copy = new Skill(copyFromThisSkill);
+
+                this.Skills.Add(copy);
+            }
+        }
     }
+    
+    internal class ConsoleMonArena
+    {
+
+    }
+
+    
 }
+
+    

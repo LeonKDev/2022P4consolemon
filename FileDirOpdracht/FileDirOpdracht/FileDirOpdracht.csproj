@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="monsterdata.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Compile Include="C:\projects\f2m4\GD\csharp\Program.cs" Link="Program.cs" />
   </ItemGroup>
 
 </Project>

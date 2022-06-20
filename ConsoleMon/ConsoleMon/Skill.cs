@@ -11,6 +11,7 @@ namespace ConsoleMon
         int damage = 0;
         int energyCost = 0;
         string name = "Lick";
+        
 
         Elements element = Elements.Fire;
 
@@ -19,6 +20,17 @@ namespace ConsoleMon
             caster.DepleteEnergy(energyCost);
             target.TakeDamage(damage);
 
-        }   
+        }
+
+        internal Skill()
+        {
+
+        }
+        internal Skill(Skill copyFrom)
+        {
+            this.damage = copyFrom.damage;
+            this.energyCost = copyFrom.energyCost;
+            this.name = copyFrom.name;
+        }
     }
 }
