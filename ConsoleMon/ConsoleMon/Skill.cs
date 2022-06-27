@@ -8,8 +8,8 @@ namespace ConsoleMon
 {
     internal class Skill
     {
-        int damage = 0;
-        int energyCost = 0;
+        internal int damage;
+        internal int energyCost;
         string name = "Lick";
         
 
